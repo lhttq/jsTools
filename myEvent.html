@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义事件绑定</title>
+    <script src="js/event.js"></script>
+    <script>
+        window.onload = function() {
+            let btn01 = document.getElementById('btn01');
+            let div = document.getElementById('div');
+            // let obj = {
+            //     elem: btn01,
+            //     type: 'click',
+            //     selector: null,
+            //     fn: event => {
+            //         console.log('可以使用');
+            //     }
+            // }
+            bindEvent({
+                elem: div,
+                type: 'click',
+                fn: event => {
+                    console.log('可以使用');
+                    console.log(event.target);
+                    console.log(event.target.matches('button'));
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div">
+        <button id="btn01">点我</button>
+    </div>
+
+</body>
+
+</html>

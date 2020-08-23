@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深拷贝</title>
+    <script src="js/deepClone.js"></script>
+    <script>
+        window.onload = function() {
+            const obj = {
+                name: "deepClone",
+                data: {
+                    msg: 'nihao',
+                    age: 2,
+                    data: {
+                        str: 'string',
+                        num: 'number'
+                    },
+                    arr: [{
+                        id: 1,
+                        title: '深拷贝',
+                        detail: '深拷贝是将整个对象在堆内存中复制一份的过程'
+                    }, {
+                        id: 2,
+                        title: '浅拷贝',
+                        detail: '普通的复制，一般只在栈内存进行'
+                    }],
+                    display: ['vue', 'jquery', 'layui']
+                }
+            }
+            let objCopy = deepClone(obj);
+            console.log(objCopy);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

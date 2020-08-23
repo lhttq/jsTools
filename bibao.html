@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包</title>
+    <script>
+        window.onload = function() {
+            // let i, a;
+            // const flag = document.createDocumentFragment();
+            // const d1 = Date.now();
+            // for (i = 0; i < 10000; i++) {
+            //     a = document.createElement('a');
+            //     a.innerHTML = i + '<br>';
+            //     a.addEventListener('click', function(e) {
+            //         e.preventDefault();
+            //         console.log(i);
+            //     });
+            //     flag.appendChild(a);
+            // }
+            // document.body.appendChild(flag);
+            // const d2 = Date.now();
+            // let d = d2 - d1;
+            // console.log(d);
+            //     let url = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595914685491&di=6387e1286cb0adda95cf18bf489417e4&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg';
+
+            //     function getImg(src) {
+            //         return new Promise((resolve, reject) => {
+            //             const img = document.createElement('img');
+            //             img.onload = () => {
+            //                 resolve(img);
+            //             }
+            //             img.onerror = () => {
+            //                 const err = new Error(`图片加载失败${src}`);
+            //                 reject(err);
+            //             }
+            //             img.src = src;
+            //         });
+            //     }
+            //     getImg(url).then(img => {
+            //         console.log(img.width);
+            //         return img;
+            //     }).then(img => {
+            //         console.log(img.height);
+            //     });
+            //     var t = 10;
+
+            //     function test(t) {
+            //         t += t;
+            //         var t = 3;
+            //         console.log(t);
+            //     }
+            //     test(t);
+            let userAgent = navigator.userAgent;
+            console.log(userAgent);
+            console.log(typeof userAgent);
+            var isOpera = userAgent.indexOf("Opera") > -1;
+            var Chrome = userAgent.indexOf("Chrome") > -1;
+            if (Chrome) {
+                console.log('我是Chrome');
+            }
+        }
+    </script>
+    <style>
+        * {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+
+</html>

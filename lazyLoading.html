@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片懒加载</title>
+    <script src="js/lazyLoading.js"></script>
+    <script>
+        window.onload = function() {
+            const imgList = document.getElementsByClassName("imgItem");
+            console.log(imgList);
+            loading(imgList);
+        }
+    </script>
+    <style>
+        img {
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="imgList">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597468382295&di=1e544930c97c4724f0f5514e21ed9b6c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160513%2Fcfce8b6a207945499f2cf6680c18dda8_th.jpg" alt="图片不存在" class="imgItem"
+            data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597467751677&di=c5731b4b83e30d4ed68e26bea8a15a18&imgtype=0&src=http%3A%2F%2Fimg02.tooopen.com%2Fimages%2F20131212%2Fsy_51552288528.jpg">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597468382295&di=1e544930c97c4724f0f5514e21ed9b6c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160513%2Fcfce8b6a207945499f2cf6680c18dda8_th.jpg" alt="图片不存在" class="imgItem"
+            data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597467751677&di=c5731b4b83e30d4ed68e26bea8a15a18&imgtype=0&src=http%3A%2F%2Fimg02.tooopen.com%2Fimages%2F20131212%2Fsy_51552288528.jpg">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597468382295&di=1e544930c97c4724f0f5514e21ed9b6c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160513%2Fcfce8b6a207945499f2cf6680c18dda8_th.jpg" alt="图片不存在" class="imgItem"
+            data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597467751677&di=c5731b4b83e30d4ed68e26bea8a15a18&imgtype=0&src=http%3A%2F%2Fimg02.tooopen.com%2Fimages%2F20131212%2Fsy_51552288528.jpg">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597468382295&di=1e544930c97c4724f0f5514e21ed9b6c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160513%2Fcfce8b6a207945499f2cf6680c18dda8_th.jpg" alt="图片不存在" class="imgItem"
+            data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597467751677&di=c5731b4b83e30d4ed68e26bea8a15a18&imgtype=0&src=http%3A%2F%2Fimg02.tooopen.com%2Fimages%2F20131212%2Fsy_51552288528.jpg">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597468382295&di=1e544930c97c4724f0f5514e21ed9b6c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160513%2Fcfce8b6a207945499f2cf6680c18dda8_th.jpg" alt="图片不存在" class="imgItem"
+            data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597467751677&di=c5731b4b83e30d4ed68e26bea8a15a18&imgtype=0&src=http%3A%2F%2Fimg02.tooopen.com%2Fimages%2F20131212%2Fsy_51552288528.jpg">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597468382295&di=1e544930c97c4724f0f5514e21ed9b6c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160513%2Fcfce8b6a207945499f2cf6680c18dda8_th.jpg" alt="图片不存在" class="imgItem"
+            data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597467751677&di=c5731b4b83e30d4ed68e26bea8a15a18&imgtype=0&src=http%3A%2F%2Fimg02.tooopen.com%2Fimages%2F20131212%2Fsy_51552288528.jpg">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597468382295&di=1e544930c97c4724f0f5514e21ed9b6c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160513%2Fcfce8b6a207945499f2cf6680c18dda8_th.jpg" alt="图片不存在" class="imgItem"
+            data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597467751677&di=c5731b4b83e30d4ed68e26bea8a15a18&imgtype=0&src=http%3A%2F%2Fimg02.tooopen.com%2Fimages%2F20131212%2Fsy_51552288528.jpg">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597468382295&di=1e544930c97c4724f0f5514e21ed9b6c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160513%2Fcfce8b6a207945499f2cf6680c18dda8_th.jpg" alt="图片不存在" class="imgItem"
+            data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597467751677&di=c5731b4b83e30d4ed68e26bea8a15a18&imgtype=0&src=http%3A%2F%2Fimg02.tooopen.com%2Fimages%2F20131212%2Fsy_51552288528.jpg">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597468382295&di=1e544930c97c4724f0f5514e21ed9b6c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160513%2Fcfce8b6a207945499f2cf6680c18dda8_th.jpg" alt="图片不存在" class="imgItem"
+            data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597467751677&di=c5731b4b83e30d4ed68e26bea8a15a18&imgtype=0&src=http%3A%2F%2Fimg02.tooopen.com%2Fimages%2F20131212%2Fsy_51552288528.jpg">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597468382295&di=1e544930c97c4724f0f5514e21ed9b6c&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160513%2Fcfce8b6a207945499f2cf6680c18dda8_th.jpg" alt="图片不存在" class="imgItem"
+            data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597467751677&di=c5731b4b83e30d4ed68e26bea8a15a18&imgtype=0&src=http%3A%2F%2Fimg02.tooopen.com%2Fimages%2F20131212%2Fsy_51552288528.jpg">
+    </div>
+</body>
+
+</html>

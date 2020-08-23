@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bind/apply/call函数的使用</title>
+    <script src="js/class.js"></script>
+    <script src="js/bind.js"></script>
+    <script src="js/call.js"></script>
+    <script src="js/apply.js"></script>
+    <script>
+        window.onload = function() {
+            let stu = new Students('小花', 23, '123456');
+            var obj = {
+                name: '小红',
+                sex: '女',
+                num: '12345678'
+            }
+            class sut {
+                constructor(name, age, num) {
+                    this.name = '小红',
+                        this.age = 23,
+                        this.num = '123456789'
+                }
+                fn() {
+                    console.log(this);
+                }
+            }
+            stu.myFun();
+            stu.myFun.call2(obj);
+            let s = new sut();
+            s.fn();
+            stu.myFun.apply1(obj, [123, 456]);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
